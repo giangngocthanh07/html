@@ -45,8 +45,8 @@ pipeline {
                     ssh -o StrictHostKeyChecking=no -i ${SSH_KEY} ${SSH_USER}@${IP_SERVER_RUN} "
                         cd /home/ubuntu/devops_04/docker-compose
 
-                        docker compose pull js_nextjs
-                        docker compose up -d --force-recreate js_nextjs
+                        docker compose pull html
+                        docker compose up -d --force-recreate html
                         docker image prune -f
                     "
                 '''
